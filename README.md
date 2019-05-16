@@ -1,4 +1,4 @@
-mocha-bamboo-reporter
+mocha-bamboo-spec-reporter
 =====================
 
 Bamboo Reporter for Mocha on Node.js
@@ -8,14 +8,14 @@ Designed to integrate with [Atlassian Bamboo's Node.js plugin](https://marketpla
 Usage
 =====
 
-    mocha -R mocha-bamboo-reporter
+    mocha -R mocha-bamboo-spec-reporter
     
-Integrating mocha & bamboo with mocha-bamboo-reporter
+Integrating mocha & bamboo with mocha-bamboo-spec-reporter
 =====================================================
 
 Download and install the Node.js Bamboo Plugin from the Atlassian Marketplace from inside your Bamboo installation.  (Note that this is not yet supported for onDemand installations)
 
-Then, in your package.json file, add a devDependency for "mocha-bamboo-reporter", and a script "bamboo" as outlined below...
+Then, in your package.json file, add a devDependency for "mocha-bamboo-spec-reporter", and a script "bamboo" as outlined below...
 
     package.json
     
@@ -23,12 +23,12 @@ Then, in your package.json file, add a devDependency for "mocha-bamboo-reporter"
     "devDependencies": {
         ...
         "mocha": ">=1.8.1",
-        "mocha-bamboo-reporter": "*"
+        "mocha-bamboo-spec-reporter": "*"
     }
     
     "scripts": {
         ...
-        "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter"
+        "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-spec-reporter"
     }
     
 * In Bamboo, create an "npm task" with command `run-script bamboo`
@@ -39,8 +39,8 @@ Then, in your package.json file, add a devDependency for "mocha-bamboo-reporter"
 
 To run your Mocha tests without modifying your package.json you can simply do the following in Bamboo:
 
-* Add a "npm" task with command `install mocha-bamboo-reporter`
-* Add a "Node.js" task with script `node_modules/mocha/bin/mocha` and arguments `--reporter mocha-bamboo-reporter`, along with any other arguments you want to pass to Mocha
+* Add a "npm" task with command `install mocha-bamboo-spec-reporter`
+* Add a "Node.js" task with script `node_modules/mocha/bin/mocha` and arguments `--reporter mocha-bamboo-spec-reporter`, along with any other arguments you want to pass to Mocha
 * You'll still need to run a "Parse mocha results" task, and ensure you don't use an old mocha.json
 
 ### Options
