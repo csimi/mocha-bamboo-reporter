@@ -8,12 +8,7 @@
     "bamboo",
     "ci"
   ],
-  "licenses": [
-    {
-      "type": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  ],
+  "license": "Apache-2.0",
   "author": {
     "name": "Issac Goldstand",
     "email": "margol@beamartyr.net",
@@ -29,6 +24,9 @@
   },
   "directories": {
     "lib": "./lib"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
   },
   "peerDependencies": {
     "mocha": ">=1.8.1"
