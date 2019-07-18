@@ -1,3 +1,5 @@
+[![npm version](https://img.shields.io/npm/v/mocha-bamboo-spec-reporter.svg)](https://www.npmjs.com/package/mocha-bamboo-spec-reporter)
+
 mocha-bamboo-spec-reporter
 =====================
 
